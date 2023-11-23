@@ -17,31 +17,31 @@ def test_cria_termometro_com_temperatura_e_medida():
 
 def test_imprime_temperatura():
     termometro = Termometro(temperatura = 10, unidade_medida = 'F')
-    assert termometro.imprime_temperatura() == '10 F'
+    assert termometro.imprime_temperatura == '10 F'
 
 def test_converte_kelvin_para_celsius():
     termometro_kelvin = Termometro(temperatura = 273.15, unidade_medida = 'K')
-    assert termometro_kelvin.converte_para_celsius() == 0
+    assert termometro_kelvin.converte_para_celsius == 0
 
 def test_converte_fahrenheit_para_celsius():
     termometro_fahrenheit = Termometro(temperatura = 32, unidade_medida = 'F')
-    assert termometro_fahrenheit.converte_para_celsius() == 0
+    assert termometro_fahrenheit.converte_para_celsius == 0
 
 def test_converte_celsius_para_fahrenheit():
     termometro_celsius = Termometro(temperatura = 0, unidade_medida = 'C')
-    assert termometro_celsius.converte_para_fahrenheit() == 32
+    assert termometro_celsius.converte_para_fahrenheit == 32
 
 def test_converte_kelvin_para_fahrenheit():
     termometro_kelvin = Termometro(temperatura = 273.15, unidade_medida = 'K')
-    assert termometro_kelvin.converte_para_fahrenheit() == 32
+    assert termometro_kelvin.converte_para_fahrenheit == 32
 
 def test_converte_celsius_para_kelvin():
     termometro_celsius = Termometro(temperatura = 0, unidade_medida = 'C')
-    assert termometro_celsius.converte_para_kelvin() == 273.15
+    assert termometro_celsius.converte_para_kelvin == 273.15
 
 def test_converte_fahrenheit_para_kelvin():
     termometro_fahrenheit = Termometro(temperatura = 32, unidade_medida = 'F')
-    assert termometro_fahrenheit.converte_para_kelvin() == 273.15
+    assert termometro_fahrenheit.converte_para_kelvin == 273.15
 
 def test_unidade_medida_invalida():
     try:
