@@ -42,3 +42,10 @@ def test_converte_celsius_para_kelvin():
 def test_converte_fahrenheit_para_kelvin():
     termometro_fahrenheit = Termometro(temperatura = 32, unidade_medida = 'F')
     assert termometro_fahrenheit.converte_para_kelvin() == 273.15
+
+def test_unidade_medida_invalida():
+    try:
+        termometro_invalido = Termometro(unidade_medida='X')
+        assert False, "Deveria ter lançado uma exceção para unidade inválida"
+    except ValueError as e:
+        assert str(e) == 'Unidade inválida. As unidades válidas são: C, F, K'
